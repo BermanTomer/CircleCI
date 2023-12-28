@@ -7,7 +7,4 @@ jobs:
    steps:
     - checkout
     - run: echo "Hello world"
-workflows:
-  say-hello-workflow:
-    jobs:
-      - say-hello
+
