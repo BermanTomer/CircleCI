@@ -1,8 +1,13 @@
 version: 2.1
 jobs:
-build:
- docker:
-  - image: cimg/node:17.2.0
- steps:
-  - checkout
-  - run: echo "Hello world"
+ say-hello:
+  build:
+   docker:
+    - image: cimg/node:17.2.0
+   steps:
+    - checkout
+    - run: echo "Hello world"
+workflows:
+  say-hello-workflow:
+    jobs:
+      - say-hello
